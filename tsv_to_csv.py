@@ -10,6 +10,10 @@ if __name__ == '__main__':
             fn = argv[1]
             try:
                 enc = argv[2]
+                try:
+                    sep = argv[3]
+                except:
+                    sep = ','
             except:
                 enc = 'utf-8'
         cp = os.getcwd() + os.sep
@@ -19,7 +23,7 @@ if __name__ == '__main__':
         try:
             with open(in_fn, 'r', encoding=enc) as tsv, open(out_fn, 'w+', encoding=enc) as csv:
                 str_file = tsv.read()
-                csv.write(str_file.replace('\t', ','))
+                csv.write(str_file.replace('\t', sep))
             print('Succesfully converted')
         except FileNotFoundError:
             print('File not found')

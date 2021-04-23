@@ -10,10 +10,10 @@ Simplest usage is to run directly with the file name from the CLI:
 python tsv_to_csv.py file_name
 ```
 
-## Usage adding encoding
-If you want to add the encoding you can add an additional encoding parameter:
+## Usage adding encoding and separator
+If you want to add the encoding you can add an additional encoding (by default is utf-8) and separator (by default is ,) parameters:
 ```bash
-python tsv_to_csv.py file_name encoding
+python tsv_to_csv.py file_name encoding separator
 ```
 
 ## Guided usage
